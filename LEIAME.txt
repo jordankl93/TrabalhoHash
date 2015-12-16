@@ -1,0 +1,4 @@
+Exemplo de execução dos programas: (Os .jar de cada programa se encontram no caminho mencionado em cada linha abaixo)
+java -jar HashSemColisao\dist\HashSemColisao.jar entrada.txt busca.txt saidaSemColisao.txt
+java -jar HashLista\dist\HashLista.jar entrada.txt busca.txt saidaLista.txt
+java -jar HashHash\dist\HashHash.jar entrada.txt busca.txt saidaHashHash.txt
