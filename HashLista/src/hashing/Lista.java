@@ -13,14 +13,21 @@ import javax.swing.JOptionPane;
  */
 public class Lista {
 
-    No primeiro, ultimo;
-    int totalNos;
+    private No primeiro, ultimo;
+    private int totalNos, colisoes; 
 
     public Lista() {
         primeiro = ultimo = null;
         totalNos = 0;
+        colisoes = 1;
     }
-
+    
+    //Função relativa ao número de colisões que aconteceram para achar o nó
+    public int colisoes(){
+        return colisoes;
+    }
+    
+    //Função que retorna o tamanho da lista
     public int size() {
         return totalNos;
     }
@@ -41,14 +48,15 @@ public class Lista {
     
     public boolean existeNo(String elemento) {
         No no = primeiro;
-        int contador = 1;
+        //int contador = 1;
+        colisoes = 1; // Reinicia o contador de colisões
         if (isEmpty() == false) {
-            while (contador <= size()) {
+            while (colisoes <= size()) {
                 if (no.elemento.equals(elemento)) {
                     return true;
                 } else {
                     no = no.prox;
-                    contador++;
+                    colisoes++;
                 }
             }
         }

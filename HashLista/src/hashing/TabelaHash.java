@@ -59,12 +59,12 @@ public class TabelaHash {
         if (lista.existeNo(chave)) {            
             timeSearch = System.nanoTime() - timeInit;
             big = new BigDecimal(timeSearch);
-            return chave + " " + big.movePointLeft(6).abs() + "ms [" + lista.size() + " colisoes]";
+            return chave + " " + big.movePointLeft(6).abs() + "ms [" + lista.colisoes()+ " colisoes]";
         } 
         else {
             timeSearch = System.nanoTime() - timeInit;
             big = new BigDecimal(timeSearch);
-            return chave + " " + big.movePointLeft(6).abs() + "ms [" + lista.size() + " colisoes] NAO";
+            return chave + " " + big.movePointLeft(6).abs() + "ms [" + lista.colisoes()+ " colisoes] NAO";
         }
     }
 }
